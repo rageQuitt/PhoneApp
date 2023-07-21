@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% block title %}
+            <title>{% endblock %}</title>
+        {% block stylesheet %}
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.css">
+          <link href="{{ asset('asset/css/style.css') }}" rel="stylesheet" />
+        {% endblock %}
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-dark custom">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Catch a Cheater</a>
+    <button class="navbar-toggler --bs-info-bg-subtle " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+      <span class="navbar-toggler-icon  --bs-info-bg-subtle "></span>
+    </button>
+    <div class="offcanvas offcanvas-end text-bg-info" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title text-bg-info p-3" id="offcanvasDarkNavbarLabel">To Catch a cheater</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">About Us</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li><a class="dropdown-item" href="#">Connection</a></li>
+              <li><a class="dropdown-item" href="#">Inscription</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Mentions Légales</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+        </header>
+<main>
+        {% block content %}
+            <!-- Le contenu de body sera défini dans d'autres templates qui étendent cette base -->
+        {% endblock %}
+</main>
+        <footer>
+            <!-- Votre contenu de footer ici -->
+        </footer>
+
+        {% block javascript %}
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/intlTelInput.min.js"></script>
+        <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+        <script src="/asset/js/main.js"></script>
+      {% endblock %}
+    </body>
+</html>
