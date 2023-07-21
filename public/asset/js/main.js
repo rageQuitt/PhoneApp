@@ -17,7 +17,6 @@ async function validateCaptcha(captchaResponse) {
         },
         body: new URLSearchParams({
             'response': captchaResponse,  // the 'h-captcha-response' value
-            'secret': '0xFd90F054A632Ce6582863330732b1dbAB61c5903'
         })
     });
 
